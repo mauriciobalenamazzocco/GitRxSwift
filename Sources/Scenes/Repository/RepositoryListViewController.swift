@@ -94,10 +94,11 @@ class RepositoryListViewController: UIViewController {
             var errorString = ""
             switch error {
             case .parseError:
-                errorString = ""
+                errorString = NSLocalizedString("apiErrorLimit", comment: "")
             case .urlInvalid:
-                errorString = ""
+                errorString = NSLocalizedString("invalidUrl", comment: "")
             }
+            strongSelf.showError(error: errorString)
         }
     }
 
